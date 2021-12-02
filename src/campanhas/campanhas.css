@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap");
+
+.campanhas {
+  display: flex;
+  justify-content: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-campanhas {
+  width: 30vw;
+}
+
+.figure-campanhas {
+  margin: 5px;
+}
+
+.description {
+  font-size: 1.75vw;
+  width: 50vw;
+  text-align: justify;
+}
+
+figcaption {
+  font-size: 1.5vw;
+  font-weight: bolder;
+}
+
+@media (max-width: 460px) and (orientation: portrait) {
+  figcaption {
+  font-size: 3vw;
+}
+  .description {
+    width: 60vw;
+    font-size: 1.5vw;
+  }
+  .image-campanhas {
+    width: 50vw;
+  }
+  .meet {
+    font-size: 6vw;
+  }
+}

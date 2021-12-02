@@ -1,0 +1,11 @@
+/**{
+    border: 1px solid gray;
+} 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400&display=swap");
+#pag {
+  background-image: linear-gradient(to bottom, rgb(214, 214, 214), white);
+}
+
+
+
