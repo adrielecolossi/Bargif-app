@@ -1,6 +1,4 @@
 import React from "react";
-
-import HeaderOne from "./header/header.js";
 import "./App.css";
 import Parcerias from "./parcerias/parcerias.js";
 import Home from "./home/home.js";
@@ -16,11 +14,15 @@ import Beneficiario from "./beneficiario/beneficiario.js";
 import FormCampanhas from "./formcampanhas/formcampanhas.js";
 import OnlyNoticia from "./galeria/onlynoticia.js";
 import Login from "./login/login.js";
+import OnlyCampanha from "./campanhas/onlycampanha.js";
+import Logged from "./logged/logged";
+
+//import HeaderOne from "./header/header.js";
+//<HeaderOne></HeaderOne>
 function App() {
   return (
     <div id="pag">
       <Router>
-        <HeaderOne></HeaderOne>
         <Switch>
           <Route path="/parcerias" component={Parcerias}></Route>
           <Route path="/onlynoticia" component={OnlyNoticia}></Route>
@@ -28,11 +30,15 @@ function App() {
           <Route path="/noticias" component={Noticias}></Route>
           <Route path="/doar" component={Doar}></Route>
           <Route path="/campanhas" component={Campanhas}></Route>
+          <Route path="/onlycampanha" component={OnlyCampanha}></Route>
           <Route path="/pactopelavida" component={Pacto}></Route>
           <Route path="/pontos" component={Pontos}></Route>
           <Route path="/perguntas" component={Perguntas}></Route>
           <Route path="/formcampanhas" component={FormCampanhas}></Route>
+    
+       
           <Route path="/login" component={Login}></Route>
+          <Route path="/logged" component={Logged}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
         <Footer></Footer>
