@@ -20,6 +20,10 @@
   font-size: 1.75vw;
   width: 50vw;
   text-align: justify;
+   display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 figcaption {
