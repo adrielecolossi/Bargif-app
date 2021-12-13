@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap");
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+nav {
+  background-color: rgb(226, 185, 61);
+  z-index: 10000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+}
+
+.scale-in-center {
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.top-image {
+  padding: 5px;
+  width: 12%;
+  margin-bottom: 2px;
+}
+
+.top-menu {
+  color: white;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-left: 0;
+  margin-top: 22.5px;
+}
+
+li{
+  color: white;
+  list-style: none;
+  font-size: 2em;
+}
+
+
+
+.top-menu-item:hover {
+  height: 10%;
+  text-align: center;
+  font-size: 1.9vw;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+h1,
+h2 {
+  color: rgb(231, 231, 231);
+}
+
+h1 {
+  font-size: 2.5vw;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 1.5vw;
+  text-align: center;
+  margin-top: 1.5%;
+  padding: 0;
+}
+
+.capa {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #023a50 !important;
+  /* background-color: #025373 !important;*/
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.middle-img {
+  padding-top: 50px;
+  width: 15%;
+  margin: auto;
+}
+
+.icons {
+  width: 3vw;
+}
+
+.info {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.2vw;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(231, 231, 231);
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.2%;
+}
+
+/* definir tamanho correto de celular */
+@media (max-width: 1010px) {
+  .top-menu-item {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 6.9vw;
+  }
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  .middle-img {
+    width: 40%;
+  }
+  .icons {
+    width: 6vw;
+  }
+
+  .info {
+    font-size: 2.5vw;
+  }
+  .top-image {
+    width: 18vw;
+    height: 5vw;
+    padding: 1vw;
+    margin-top: 1%;
+  }
+}
+
+@media (max-width: 460px) {
+  .top-menu {
+    /* margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px; */
+    display: none;
+  }
+  nav img {
+    width: 10vw;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  .middle-img {
+    width: 40%;
+    margin-top: -8px;
+  }
+  .icons {
+    width: 5.5vw;
+  }
+
+  .info {
+    font-size: 3.5vw;
+  }
+  .top-image {
+    width: 25vw;
+    height: 8vw;
+    padding: 1vw;
+    margin-top: 1%;
+  }
+}
