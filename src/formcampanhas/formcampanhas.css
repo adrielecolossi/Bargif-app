@@ -1,0 +1,48 @@
+
+label {
+  font-size: 0.8em !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 1.5em !important;
+  color: black;
+}
+
+input,
+textarea {
+  border: 2px solid rgb(226, 185, 61);
+  border-radius: 4px;
+  padding: 10px;
+  width: 20%;
+  margin: 2%;
+  font-size: 1.25vw;
+}
+
+.input {
+  width: 70%;
+}
+
+fieldset {
+  border: none;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+
+.forms-button {
+  width: 20%;
+  height: 30%;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 2vw;
+  background-color: rgb(226, 185, 61);
+  border: none;
+  margin: 1%;
+}
