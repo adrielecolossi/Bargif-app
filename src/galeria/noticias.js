@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./noticias.css";
 import OnlyNoticia from "./onlynoticia.js";
 import { Link } from "react-router-dom";
+import HeaderOne from "../header/header.js";
 
 const noticias = [
   {
@@ -46,6 +47,7 @@ function Noticias() {
 
   return (
     <div>
+      <HeaderOne></HeaderOne>
       <p className="meet"> Conheça mais sobre as ações do BARG!</p>
 
       <div className="pag">
@@ -77,17 +79,6 @@ function Noticias() {
           );
         })}
       </div>
-      <button
-        className="see"
-        onClick={() =>
-          (document.querySelector("div.pag").style.overflow = "visible")(
-            (document.querySelector("div.pag").style.height = "10%")
-          )
-        }
-      >
-        {" "}
-        Ver mais{" "}
-      </button>
     </div>
   );
 }

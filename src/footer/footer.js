@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-image">
-        <Link to="/formcampanhas" className="Link">
+        <Link to="/login" className="Link">
           <img
             src="https://drive.google.com/uc?id=1ImZ4n3Gf9mtR1HmBGzL_ZXCTCOUxlQzC"
             alt="Logo do Banco de Alimentos"

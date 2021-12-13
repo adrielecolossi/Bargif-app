@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./formcampanhas.css";
-
+import HeaderLogged from "../headerLogged/headerLogged";
 const axios = require("axios");
 function FormCampanhas() {
   const [nome, setNome] = useState("");
@@ -8,29 +8,31 @@ function FormCampanhas() {
   const [descricao, setDescricao] = useState("");
   const [inicio, setInicio] = useState("");
   const [fim, setFim] = useState("");
+const   token= localStorage.getItem("token");
   const enviaDados = async (e) => {
-    console.log("enviando");
     e.preventDefault();
-
     axios //faz chamada http
-      .post("http://localhost:3002/campanhas", {
-        nome,
+      .post("http://localhost:3001/fcampanhas", {
+       token, 
+      nome,
         logo,
         descricao,
         inicio,
-        fim, // nome: nome
+        fim,
+         // nome: nome
       })
       .then((response) => {
-        console.log("resposta da chamada http");
-        console.log(response);
+        let msg = response.data.msg;
+        alert(msg)
+          //'Senha incorreta'
       })
       .catch((error) => {
-        console.log("erro enviando formulario");
-        console.log(error);
+      alert("Falha ao cadastrar a campanha. Faça novamente seu login! ")
       });
   };
   return (
     <div>
+    <HeaderLogged/>
       <fieldset classname="forms">
         <legend class="meet"> Cadastre uma campanha</legend>
         <input
@@ -70,6 +72,7 @@ function FormCampanhas() {
           <input
             type="date"
             name="fim"
+            id="fim"
             onChange={(v) => setFim(v.target.value)}
             value={fim}
           />

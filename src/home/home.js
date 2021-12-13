@@ -5,9 +5,9 @@ import { Icon } from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import "react-image-gallery/styles/css/image-gallery.css";
+import HeaderOne from "../header/header.js";
 
 function Home() {
-  window.scrollTo(0, 0);
 
   const [info, setInfo] = useState("Clique nas panelas para mais informações!");
 
@@ -46,6 +46,7 @@ function Home() {
 
   return (
     <>
+    <HeaderOne></HeaderOne>
       <div className="main-pag">
         <br />
         <div className="section-aside">
@@ -191,16 +192,17 @@ function Home() {
             </div>
           </div>
           <div className="Box">
-            <div className="Box-item">
+            
               <Link
                 to="/noticias"
                 className="Link"
                
-              >
+              ><div className="Box-item">
                 {" "}
                 Notícias do BARG
+                </div>
               </Link>
-            </div>
+           
           </div>
         </div>
       </div>

@@ -1,9 +1,30 @@
-import React from "react";
-import "./header.css";
+import React, { useState } from "react";
+import "./headerLogged.css";
 import { Link } from "react-router-dom";
 import SideBar from "../sidebar/SideBar.js";
+var axios = require("axios")
 
-function HeaderOne() {
+let email= localStorage.getItem('user');
+let tokenRecebido= localStorage.getItem('token');
+function HeaderLogged(props) {
+
+    const [nome, setNome] = useState("");
+  const pegaNome = async () => {
+    
+  
+    axios.post('http://localhost:3001/logged', 
+    {
+      email,
+      tokenRecebido
+    }).then((response) => {
+       setNome(response.data[0].nome)  
+      }, (error) => {
+       alert("Não autenticado")
+        console.log(error);
+      });
+    }
+    pegaNome()
+   
   return (
     <header>
       <nav>
@@ -13,56 +34,11 @@ function HeaderOne() {
             alt="Logo do IFRS"
           />
         <SideBar />
-
-        <div>
-          <ul className="top-menu">
-            <li className="top-menu-item">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                {" "}
-                Home
-              </Link>
-            </li>
-
-            <li className="top-menu-item">
-              <Link
-                to="/campanhas"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                {" "}
-                Campanhas
-              </Link>
-            </li>
-
-            <li className="top-menu-item">
-              <Link
-                to="/pontos"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                {" "}
-                Distribuição
-              </Link>
-            </li>
-
-            <li className="top-menu-item">
-              <Link
-                to="/parcerias"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                {" "}
-                Parcerias
-              </Link>
-            </li>
-
-            <li className="top-menu-item">
-              <Link
-                to="/perguntas"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                {" "}
-                FAQ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              </Link>
-            </li>
-          </ul>
+<div>
+       <ul>
+         <li  style={{ textDecoration: "none", color: "white" }} id="User">
+        {nome}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+       </ul>  
         </div>
       </nav>
 
@@ -101,4 +77,4 @@ function HeaderOne() {
   );
 }
 
-export default HeaderOne;
+export default HeaderLogged;

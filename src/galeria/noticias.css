@@ -50,19 +50,6 @@
   cursor: pointer;
 }
 
-.see {
-  margin: 3%;
-  margin-left: 40%;
-  font-size: 1.5em;
-  width: 15vw;
-  height: 8vw;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: rgb(226, 185, 61);
-  border: white;
-  color: white;
-}
-
 .noticia-body {
   width: 100%;
   color: black;
@@ -90,11 +77,5 @@
   .outro {
     width: 70vw;
     padding: 3%;
-  }
-
-  .see {
-    width: 30vw;
-    height: 20vw;
-    margin-left: 35%;
   }
 }
