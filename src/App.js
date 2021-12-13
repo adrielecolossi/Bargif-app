@@ -13,7 +13,7 @@ import Doar from "./doar/doar.js";
 import Beneficiario from "./beneficiario/beneficiario.js";
 import FormCampanhas from "./formcampanhas/formcampanhas.js";
 import OnlyNoticia from "./galeria/onlynoticia.js";
-import Login from "./login/login.js";
+
 import OnlyCampanha from "./campanhas/onlycampanha.js";
 import Logged from "./logged/logged";
 
@@ -35,9 +35,7 @@ function App() {
           <Route path="/pontos" component={Pontos}></Route>
           <Route path="/perguntas" component={Perguntas}></Route>
           <Route path="/formcampanhas" component={FormCampanhas}></Route>
-    
-       
-          <Route path="/login" component={Login}></Route>
+
           <Route path="/logged" component={Logged}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
